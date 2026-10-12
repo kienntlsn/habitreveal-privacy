@@ -8,47 +8,130 @@
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #222; max-width: 800px; margin: 0 auto; padding: 24px; }
     h1 { color: #0d47a1; }
     h2 { color: #1565c0; margin-top: 28px; }
+    h3 { color: #1976d2; margin-top: 18px; }
     p, li { color: #444; }
     .updated { color: #777; font-size: 0.9em; margin-bottom: 24px; }
     .box { background: #f0f7ff; border-left: 4px solid #1976d2; padding: 12px 16px; margin: 20px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { border: 1px solid #d0d7e2; padding: 8px 10px; text-align: left; vertical-align: top; font-size: 0.95em; }
+    th { background: #f0f7ff; }
   </style>
 </head>
 <body>
   <h1>Privacy Policy for Habit Reveal</h1>
-  <div class="updated">Last updated: August 17, 2026</div>
+  <div class="updated">Last updated: October 12, 2026</div>
 
   <div class="box">
-    <strong>Summary:</strong> Habit Reveal is designed with your privacy in mind. We do not collect, store, or sell your personal data. All habit tracking data is stored locally on your device.
+    <strong>Summary:</strong> Habit Reveal works fully offline without an account. Your habits stay on your device unless you
+    choose to sign in (for backup / sync) or use the Couple, Group or Chat features. We use Firebase Analytics to understand
+    how the app is used (for example, whether new users finish the welcome guide). We do <strong>not</strong> show ads,
+    do <strong>not</strong> use the Advertising ID, and do <strong>not</strong> sell your data.
   </div>
 
-  <h2>1. Information We Do Not Collect</h2>
-  <p>Habit Reveal operates as an offline-first application. We do not collect or transmit:</p>
+  <h2>1. Using the App Without an Account</h2>
+  <p>Without signing in, all data you create — habits, progress, moods, notes, journal entries, photos and settings — is
+  stored only on your device. Uninstalling the app or clearing its data deletes this information permanently, unless you
+  have made a backup.</p>
+
+  <h2>2. Information We Collect and Why</h2>
+  <table>
+    <tr><th>Data</th><th>When</th><th>Purpose</th></tr>
+    <tr>
+      <td>Google account name, email address and profile photo URL</td>
+      <td>Only if you sign in with Google</td>
+      <td>Identify your account, restore your backup on a new device, show your name/avatar to partners you invite</td>
+    </tr>
+    <tr>
+      <td>Habit data (habit names, descriptions, progress, completed days, streaks, moods, notes, reminder settings, app preferences)</td>
+      <td>Only if you sign in and use backup / sync</td>
+      <td>Back up and sync your habits across your devices (stored in Google Firebase Cloud Firestore)</td>
+    </tr>
+    <tr>
+      <td>Images (custom puzzle pictures, proof photos)</td>
+      <td>Only if you enable image backup</td>
+      <td>Stored in the hidden <em>app data folder</em> of <strong>your own</strong> Google Drive. We cannot see these files.</td>
+    </tr>
+    <tr>
+      <td>Display name, avatar, check-ins, shared habit progress, chat messages and media you choose to send</td>
+      <td>Only if you use Couple, Group or Chat features</td>
+      <td>Shown to the partner(s) / group members you invited or joined</td>
+    </tr>
+    <tr>
+      <td>Feedback messages, your name and email, device model and Android version</td>
+      <td>Only if you send feedback in the app</td>
+      <td>Reply to you and investigate the problem you report</td>
+    </tr>
+    <tr>
+      <td>Push notification token</td>
+      <td>When the app is installed</td>
+      <td>Deliver notifications about partner/group activity and chat messages (Firebase Cloud Messaging)</td>
+    </tr>
+    <tr>
+      <td>App usage events (e.g. welcome screen shown, first habit created, first tile unlocked, reminder enabled, app opens), app instance ID, device model, OS version, app version, approximate country (from IP address)</td>
+      <td>While you use the app</td>
+      <td>Firebase Analytics — to measure and improve the app (e.g. onboarding completion and retention). Not linked to your name or email, and not used for advertising.</td>
+    </tr>
+  </table>
+  <p>We do not collect your precise location, contacts, biometric data, or payment card details.</p>
+
+  <h2>3. Advertising</h2>
+  <p>Habit Reveal contains no ads. The app does not access the Android Advertising ID, and ad personalization and
+  ad-related data collection are disabled in Firebase Analytics.</p>
+
+  <h2>4. In-App Purchases (Google Play Billing)</h2>
+  <p>Pro purchases are processed by Google Play. We receive only the purchase status needed to unlock Pro features; we never
+  see or store your payment details.</p>
+
+  <h2>5. Notifications</h2>
+  <p>Daily habit reminders are scheduled locally on your device. You can turn them off at any time in the app or in Android
+  settings.</p>
+
+  <h2>6. Third-Party Service Providers</h2>
+  <p>We use the following Google services to operate the app. Their handling of data is governed by
+  <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and
+  <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a>:</p>
   <ul>
-    <li>Personal identification information (name, email, phone number, address).</li>
-    <li>Habit names, completion timestamps, moods, notes, or photos.</li>
-    <li>Location data or biometric data.</li>
+    <li>Google Sign-In and Firebase Authentication — account sign-in</li>
+    <li>Firebase Cloud Firestore and Cloud Storage — backup, sync, Couple / Group / Chat features</li>
+    <li>Google Drive API (app data folder only) — optional image backup in your own Drive</li>
+    <li>Firebase Cloud Messaging — push notifications</li>
+    <li>Firebase Analytics — anonymous usage analytics</li>
+    <li>Google Play Billing — in-app purchases</li>
+  </ul>
+  <p>We do not sell, rent or share your personal data with anyone for their own marketing purposes.</p>
+
+  <h2>7. Data Security</h2>
+  <p>All data sent between the app and Google/Firebase services is encrypted in transit (HTTPS/TLS). Access to cloud data is
+  restricted to your own account and, for shared features, to the members you invited.</p>
+
+  <h2>8. Data Retention and Deletion</h2>
+  <ul>
+    <li><strong>Local data:</strong> deleted when you uninstall the app or clear its data.</li>
+    <li><strong>Drive images:</strong> you can remove them at any time from Google Drive → Settings → Manage apps → Habit Reveal → Delete hidden app data.</li>
+    <li><strong>Account and cloud data:</strong> kept while your account is active. You can delete your account at any time
+      <strong>inside the app</strong>: Settings → Account &amp; Cloud backup → <em>Delete account &amp; cloud data</em>. This permanently
+      removes your cloud backup, Drive photo backup, profile, invite codes, chat messages and your check-ins in couples/groups,
+      removes you from those couples/groups, and deletes your sign-in account. Habits stored only on your phone are kept.
+      If you no longer have the app installed, email us at
+      <a href="mailto:kiennt.lsn@gmail.com?subject=Habit%20Reveal%20-%20Delete%20my%20account">kiennt.lsn@gmail.com</a>
+      with the subject “Delete my account” from the Google account you signed in with; we will complete the deletion within 30 days.</li>
+    <li><strong>Analytics data:</strong> automatically deleted by Firebase after 14 months.</li>
   </ul>
 
-  <h2>2. Data Stored Locally on Your Device</h2>
-  <p>All data you create in Habit Reveal (habits, journals, progress, and settings) is stored exclusively on your device's local storage (SharedPreferences / LocalStorage). If you uninstall the app or clear app data, this information will be permanently deleted unless you choose to back it up.</p>
+  <h2>9. Your Choices</h2>
+  <ul>
+    <li>Use the app without signing in — no account or habit data leaves your device (only anonymous analytics and the push token).</li>
+    <li>Sign out at any time to stop syncing.</li>
+    <li>Leave a couple or group at any time.</li>
+    <li>Request a copy or deletion of your data by contacting us (see section 11).</li>
+  </ul>
 
-  <h2>3. In-App Purchases (Google Play Billing)</h2>
-  <p>If you purchase the Pro version (a one-time purchase), transactions are securely processed directly by the Google Play Store. We do not collect or store your payment details, credit card numbers, or billing addresses.</p>
+  <h2>10. Children's Privacy</h2>
+  <p>Habit Reveal is not directed at children under 13, and we do not knowingly collect personal information from them. If you
+  believe a child has provided us with personal information, contact us and we will delete it.</p>
 
-  <h2>4. Notifications</h2>
-  <p>Habit Reveal uses local system notifications to remind you of your daily habits at your scheduled time. These notifications are generated entirely on your device and do not connect to external servers.</p>
-
-  <h2>5. Third-Party Services</h2>
-  <p>Habit Reveal does not use third-party analytics or advertising networks. The only third-party service used is Google Play Billing API for handling optional Pro upgrades.</p>
-
-  <h2>6. Children's Privacy</h2>
-  <p>Our app does not collect personal information from children or any other users. It is safe for users of all ages.</p>
-
-  <h2>7. Changes to This Privacy Policy</h2>
-  <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
-
-  <h2>8. Contact Us</h2>
-  <p>If you have any questions or suggestions about this Privacy Policy, please contact us at:</p>
-  <p><strong>Email:</strong> kiennt.lsn@gmail.com </p>
+  <h2>11. Changes and Contact</h2>
+  <p>We may update this Privacy Policy from time to time; changes will be posted on this page with a new “Last updated” date.</p>
+  <p>Questions or requests: <strong>Email:</strong> <a href="mailto:kiennt.lsn@gmail.com">kiennt.lsn@gmail.com</a></p>
 </body>
 </html>
